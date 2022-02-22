@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body class="parent">
+    <header class="encabezado">
+        <h1>Mundial de F1</h1>
+        <div class="fecha"> 
+            <span class="date" id="date">
+                <!--Aquí se insertará la fecha-->  
+            </span>
+
+            <span class="darkMode">
+                <button class="darkModeSwitch" id="switch">
+                    <span><i class="fa-solid fa-sun"></i></span>   
+                    <span><i class="fa-solid fa-moon"></i></span>
+                </button>
+            </span>
+
+        </div>
+    </header>
+    <nav class="menu_principal">
+        <ul>
+            <li><i class="fa-solid fa-flag-checkered"></i></li>
+            <li><i class="fa-solid fa-user"></i></li>
+            <li><i class="fa-solid fa-road"></i></li>
+            <li><i class="fa-solid fa-car"></i></li>
+            <li><i class="fa-solid fa-laptop-code"></i></li>
+            <li><i class="fa-solid fa-file"></i></li>
+        </ul>
+    </nav>
+    <main class="cuerpo">
+        <section class="cabecera_central caja">
+                <h2>Clasificación de pilotos</h2>
+                <div class="year">
+                    <label for="year">Año: </label>
+                    <select name="year" id="year">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                </select></div>    
+        </section>
+
+        <section class="tabla_clasificacion caja" >
+            
+                <table class="clasificacion_pilotos">
+                    <thead>
+                        <tr>
+                            <td>Pos</td>
+                            <td></td>
+                            <td>Piloto</td>
+                            <td>Escudería</td>
+                            <td>Puntos</td>
+                            <td>Victorias</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody id="tableStandings">
+                        <!-- Aquí se insertará la tabla con la clasificación de pilotos -->
+                    </tbody>
+                </table>
+        </section>
+
+        <section class="cuadro1">
+            <div class="caja">
+                <img src="./img/img4.png" alt="">
+            </div>
+        </section>
+        <section class="cuadro2">
+            <div class="caja">
+                <img src="./img/img1.png" alt="">
+
+            </div>
+        </section>
+
+        <section class="cuadro3">
+            <div class="caja">
+                <img src="./img/img1.png" alt="">
+
+            </div>
+        </section>-->
+
+    </main>
+    <aside class="listado_eventos">
+        <section class="eventos">
+            <h2>Próximas Carreras</h2>
+            <div class="evento tipo1">
+                <i class="fa-solid fa-certificate color1"></i>
+
+                <div class="datos-evento">
+                    <p class="carrera">GP de Baréin (Sakhir)</p>
+                    <p class="fecha">20 de marzo</p>                   
+                </div>
+            </div>
+            <div class="evento tipo2">
+                <i class="fa-solid fa-certificate color2"></i>
+                <div class="datos-evento">
+                    <p class="carrera">GP de Arabia Saudí (Jeddah)</p>
+                    <p class="fecha">27 de marzo</p>                   
+                </div>
+            </div>
+            <div class="evento tipo3">
+                <i class="fa-solid fa-certificate color3"></i>
+                <div class="datos-evento">
+                    <p class="carrera">GP de Australia (Melbourne)</p>
+                    <p class="fecha">10 de abril</p>                   
+                </div>
+            </div>
+
+            <h2>Últimas carreras</h2>
+            <div class="evento">
+                <i class="fa-solid fa-certificate"></i>
+                <div class="datos-evento">
+                    <p class="carrera">GP de Abu Dhabi (Abu Dhabi)</p>
+                    <p class="fecha">12 de diciembre</p>                   
+                </div>
+            </div>
+            <div class="evento">
+                <i class="fa-solid fa-certificate"></i>
+                <div class="datos-evento">
+                    <p class="carrera">GP de Arabia (Jeddah)</p>
+                    <p class="fecha">5 de diciembre</p>                   
+                </div>
+            </div>
+            <div class="evento">
+                <i class="fa-solid fa-certificate"></i>
+                <div class="datos-evento">
+                    <p class="carrera">GP de Qatar (Al Daayen)</p>
+                    <p class="fecha">11 de noviembre</p>                   
+                </div>
+            </div>
+        </section>
+    </aside>
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>

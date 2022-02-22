@@ -1,0 +1,328 @@
+
+html {
+
+    /* Colores para el modo día */
+
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    --color-principal: #2B4671;
+    --color-secundario: #508EE1;
+    --color-menu: #2B4671;
+    --color-menu-hover: #508EE1;
+
+    --fondo-principal: #F3F2F7;
+    --fondo-caja: #FFFFFF;
+    --fondo-evento: #f0eeee;
+
+    --borde-caja: #FAFAFC;
+    --borde-evento: #cecece;
+
+    --evento-tipo1:#25BAC2;
+    --evento-tipo2:#D975D0;
+    --evento-tipo3:#ECC96D;
+    --evento-tipo4: #614ED8;
+
+    --boton-letra:#F3F2F7;
+    --boton-fondo:#6894B9;
+    --boton-letra-hover:#2B4671;
+    --boton-fondo-hover:#F3F2F7;
+    
+    background-color: var(--fondo-principal);
+
+}
+
+.dark {
+
+    /* Colores modo oscuro */ 
+
+    --color-principal: #ffffff;
+    --color-secundario: #ccc;
+    --color-menu: #aba7b8;
+    --color-menu-hover: #ea9731;
+
+    --fondo-principal: #1D192A;
+    --fondo-caja: #262238;
+    --fondo-evento: #332E40;
+    --borde-caja: #322d48;
+    --borde-evento: #52505d;
+
+    --evento-tipo1:#25BAC2;
+    --evento-tipo2:#D975D0;
+    --evento-tipo3:#ECC96D;
+    --evento-tipo4: #614ED8;
+    
+    --boton-letra:#2B4671;
+    --boton-fondo:#F3F2F7;
+    --boton-letra-hover:#F3F2F7;
+    --boton-fondo-hover:#2B4671;
+
+    background-color: var(--fondo-principal);
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color-principal);
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--color-secundario);
+}
+    
+.encabezado { 
+
+    /* Encabezado superior de la página. Contiene el título en la parte izquierda y fecha y botón modo oscuro en la derecha*/
+    
+    padding: 2rem;
+    background-color: var(--fondo-caja);
+    border-bottom: 1px solid var(--borde-caja);
+    display: flex;
+    justify-content: space-between;
+}
+
+.encabezado .fecha {
+    display: flex;
+    font-size: 1.5rem;
+    color: var(--color-menu);
+    align-items: center;
+}
+
+.encabezado .fecha .date {
+    margin-right: 2rem;
+}
+
+.encabezado .fecha .date i {
+    padding: 1rem;
+    font-size: 1.9rem;
+}
+
+/*    Modo oscuro 
+    código de Tibor Kopca
+    https://www.ma-no.org/es/diseno-web/css/modo-oscuro-en-el-sitio-web-usando-css-y-javascript
+
+*/
+
+.darkModeSwitch{
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.darkModeSwitch span{
+    width:30px;
+    height:25px;
+    line-height:30px;
+    display:block;
+    color:var(--color-secundario);
+    background: none;
+}
+
+.darkModeSwitch::after{
+    display:block;
+    background: var(--color-menu);
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all .5s ease;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+    content: "";
+}
+
+.darkModeSwitch.active{
+    background: var(--color-secundario);
+  }
+  .darkModeSwitch.active::after{
+    left:unset;
+    right:0;
+  }
+
+
+.darkModeSwitch i {
+    color: var(--borde-evento);
+}
+
+/* ---------------- MENÚ PRINCIPAL ---------------------  
+
+    Contiene estilos para los iconos que conforman el menú principal planteado a modo de menú vertical
+    en la parte izquierda de la pantalla
+
+*/
+
+.menu_principal { 
+    padding: 2em;
+    font-size: 2rem;
+    color: var(--color-menu);
+    background-color: var(--fondo-caja);
+    border-right: 1px solid var(--borde-caja);
+    text-align: center;
+}
+
+.menu_principal i:hover {
+    color: var(--color-menu-hover);
+    font-size: 2.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 1.2rem 0;
+    line-height: 4rem;
+}
+
+/* ---------------- LISTADO EVENTOS ---------------------  
+
+    Contiene estilos para la lista de carreras que conforman la columna derecha de la pantalla
+
+*/
+
+.listado_eventos {
+    border-left: 1px solid var(--borde-caja);
+}
+
+.eventos h2 {
+    padding: 1.3rem;
+    font-size: 2rem;
+    color: var(--color-menu);
+    background-color: var(--fondo-caja);
+}
+.evento {
+    padding: 1rem 1rem 1rem 3rem;
+    border-top:  1px solid var(--borde-evento);
+    background-color: var(--fondo-evento);
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    display: flex;
+}
+
+.evento i {
+    margin: 2rem 2rem 2rem 1rem;
+}
+.tipo1 {
+    border-left: 3px solid var(--evento-tipo1);
+}
+.color1 {
+    color: var(--evento-tipo1);
+}
+.tipo2 {
+    border-left: 3px solid var(--evento-tipo2);
+}
+.color2 {
+    color: var(--evento-tipo2);
+}
+.tipo3 {
+    border-left: 3px solid var(--evento-tipo3);
+}
+.color3 {
+    color: var(--evento-tipo3);
+}
+.tipo4 {
+    border-left: 3px solid var(--evento-tipo4);
+}
+.color4 {
+    color: var(--evento-tipo4);
+}
+
+.datos-evento .fecha {
+    color: var(--color-secundario);
+}
+
+/* -------------  Caja - Contenedor con esquinas redondeadas para los distintos elementos */
+
+.caja{
+    padding: 2rem;
+    margin: 2rem;    
+    background-color: var(--fondo-caja);
+    color: var(--color-principal);
+    border: 1px solid var(--borde-caja);
+    border-radius: 1rem;
+
+}
+
+
+/*  ------------------   Cabecera central -------------------
+
+    Contiene el título conforme a la opción elegida en el menú principal (sólo implementado clasificación de pilotos)
+
+*/
+
+.cabecera_central {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.cabecera_central .year {
+    font-size: 1.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cabecera_central select {
+    padding: .8rem;   
+    background-color: var(--fondo-caja);
+    color: var(--color-principal);
+}
+
+/*   ----------------------   Tabla clasificación de pilotos ------------------------
+
+    Muestra la clasificación de pilotos según el año escogido en el select 
+    Datos obtenidos de API ERGAST 
+
+    */
+
+table {
+    width: 90%;
+    border: 0;
+    border-collapse: collapse;
+}
+.clasificacion_pilotos {
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--color-principal);
+}
+.clasificacion_pilotos thead {
+    border: 0;
+    background-color: var(--fondo-evento);
+}
+.clasificacion_pilotos tr {
+    padding: 1rem;
+}
+.clasificacion_pilotos td {
+    padding: 1rem;
+}
+.clasificacion_pilotos tr:nth-child(2n) {
+    background-color: var(--fondo-evento);
+}
+
+.avatar i {
+    padding: 1rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    color: var(--fondo-caja);
+    background-color: var(--color-menu);
+}
+
+.clasificacion_pilotos button {
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    background-color: var(--boton-fondo);
+    color: var(--boton-letra);
+}
+
+.clasificacion_pilotos button:hover {
+    background-color: var(--boton-fondo-hover);
+    color: var(--boton-letra-hover);
+}
+

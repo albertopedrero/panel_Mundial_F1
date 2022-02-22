@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: 0.3fr repeat(4, 1fr);
+    grid-template-rows: 0.15fr repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    }
+    
+
+
+.encabezado { 
+    grid-area: 1 / 1 / 2 / 6; 
+}
+.menu_principal { 
+    grid-area: 2 / 1 / 6 / 2;
+}
+
+.listado_eventos {
+    grid-area: 2 / 5 / 6 / 6; 
+}
+    
+
+.cuerpo {
+    grid-area: 2 / 2 / 6 / 5;
+    display: grid;
+
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "cabecera_central cabecera_central cabecera_central"
+        "tabla_clasificacion tabla_clasificacion tabla_clasificacion"
+        "tabla_clasificacion tabla_clasificacion tabla_clasificacion"
+        "cuadro1 cuadro2 cuadro3"; 
+}
+    
+.cabecera_central { 
+    grid-area: cabecera_central; 
+}
+.tabla_clasificacion { grid-area: tabla_clasificacion;
+    height: 400px;
+    overflow: auto;
+    padding-left: 3rem;
+    }
+.cuadro1 { grid-area: cuadro1; }
+.cuadro2 { grid-area: cuadro2; }
+.cuadro3 { 
+    grid-area: cuadro3; 
+
+}
+
+.caja{
+    display: flex;
+    justify-content: space-between;
+}
